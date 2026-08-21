@@ -1,0 +1,71 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        navy: {
+          50: '#f0f4f9',
+          100: '#dbe5f0',
+          200: '#b8cce3',
+          300: '#8baad0',
+          400: '#5b80b5',
+          500: '#3d5f95',
+          600: '#2f4a78',
+          700: '#283d63',
+          800: '#1e2f4d',
+          900: '#152238',
+          950: '#0d1626',
+        },
+        teal: {
+          50: '#effbf7',
+          100: '#d7f5ec',
+          200: '#b0e9d9',
+          300: '#7dd6c0',
+          400: '#48bca0',
+          500: '#28a085',
+          600: '#1c8069',
+          700: '#186655',
+          800: '#155144',
+          900: '#114238',
+        },
+        amber: {
+          50: '#fffaeb',
+          100: '#fff0c6',
+          200: '#ffe088',
+          300: '#ffc94a',
+          400: '#ffb324',
+          500: '#f99407',
+          600: '#d97306',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      boxShadow: {
+        card: '0 1px 3px 0 rgba(15, 34, 54, 0.06), 0 1px 2px 0 rgba(15, 34, 54, 0.04)',
+        'card-hover': '0 4px 12px 0 rgba(15, 34, 54, 0.08), 0 2px 4px 0 rgba(15, 34, 54, 0.06)',
+        elevated: '0 10px 30px 0 rgba(15, 34, 54, 0.10), 0 4px 8px 0 rgba(15, 34, 54, 0.06)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.3s ease-out',
+        'slide-up': 'slideUp 0.35s ease-out',
+        'slide-in-right': 'slideInRight 0.3s ease-out',
+        'scale-in': 'scaleIn 0.2s ease-out',
+        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        slideUp: { '0%': { opacity: '0', transform: 'translateY(8px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        slideInRight: { '0%': { opacity: '0', transform: 'translateX(16px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.96)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+        pulseSoft: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0.6' } },
+      },
+    },
+  },
+  plugins: [],
+};
